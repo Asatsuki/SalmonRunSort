@@ -1,0 +1,87 @@
+﻿<html>
+
+<head>
+  <link rel="shortcut icon" href="src/assets/yinyang.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/hokusai.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="og:site_name" content="サーモンラン ブキソート">
+  <meta name="og:description" content="Splatoon2のサーモンランに登場するブキのソートです">
+  <title>サーモンラン ブキソート</title>
+
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+
+  <script src="src/js/data.js"></script>
+  <script src="src/js/data/2019-02-17.js"></script>
+
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
+
+    <div class="sorter">
+        <img src="src/assets/defaultL.png" class="left sort image">
+
+        <div class="starting start button">サーモンラン<br>ブキソート<br><br>Click to Start!</div>
+        <div class="starting load button">Load  <span></span></div>
+
+        <div class="loading button"><div></div><span>Loading...</span></div>
+
+        <div class="sorting tie button">引き分け</div>
+        <div class="sorting undo button">戻る</div>
+        <div class="sorting save button">中断セーブ</div>
+
+        <div class="finished save button">結果URLを出力</div>
+        <div class="finished getimg button">結果画像を出力</div>
+        <div class="finished list button">結果テキストを出力</div>
+
+        <img src="src/assets/defaultR.png" class="right sort image">
+
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
+
+    <div class="options"></div>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    <div class="results"></div>
+
+    <div class="info">
+        <a href="https://github.com/execfera/charasort/">Source Code</a> | <a class="clearsave">Clear Save Data</a>
+        
+        <br><br>
+
+        <p>Splatoon2のサーモンランに登場するブキ(メインウェポン)のキャラソート(?)です。</p>
+        <p>スタートする前に対象とするブキをオプションで絞り込むことができます。</p>
+        <p>オプションにマウスを重ねると説明を見ることができます。</p>
+        <p>左右の2つからサーモンランで好きなブキ、もしくは引き分けをクリックしてください</p>
+        <p>全ての質問を終えると好きなブキのランキングが表示されます</p>
+
+        <br><br>
+
+        <p>ソート中のキー操作: H/←(左を選ぶ) J/↓(戻る) K/↑(引き分け) L/→(右を選ぶ) S(セーブ)</p>
+        <p>ソート前: S/Enter(ソートを始める) L(ロード)</p>
+        <p>1/2/3は1番目、2番目、3番目のボタン</p>
+        
+        <br><br>
+
+        <p>Inspired by <a href="http://mainyan.sakura.ne.jp/thsort.html">this site</a>.</p>
+
+        <br><br>
+
+    </div>
+</div>
+</body>
+
+</html>
