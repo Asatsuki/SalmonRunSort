@@ -23,6 +23,7 @@ dataSet[dataSetVersion].options = [
   {
     name: "クマサン印のブキを含まない",
     key: "glizzco",
+    tooltip: "クマサン印のブキを除外します",
     checked: false
   }
 ];

@@ -1,4 +1,4 @@
-/** @type {CharData} */
+﻿/** @type {CharData} */
 let characterData       = [];   // Initial character data set used.
 /** @type {CharData} */
 let characterDataToSort = [];   // Character data set after filtering.
@@ -558,8 +558,8 @@ function saveProgress(saveType) {
 
   if (saveType !== 'Autosave') {
     const saveURL = `${location.protocol}//${sorterURL}?${saveData}`;
-    const inProgressText = 'You may click Load Progress after this to resume, or use this URL.';
-    const finishedText = 'You may use this URL to share this result, or click Load Last Result to view it again.';
+    const inProgressText = 'このURLを貼り付けると続きから始められます。';
+    const finishedText = 'このURLを保存・共有すると、結果をシェアしたり後で見たりできます。';
 
     window.prompt(saveType === 'Last Result' ? finishedText : inProgressText, saveURL);
   }
@@ -599,12 +599,12 @@ function generateImage() {
 
     imgButton.removeEventListener('click', generateImage);
     imgButton.innerHTML = '';
-    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">Download Image</a><br><br>`);
+    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">画像をDL</a><br><br>`);
 
-    resetButton.insertAdjacentText('beforeend', 'Reset');
+    resetButton.insertAdjacentText('beforeend', 'リセット');
     resetButton.addEventListener('click', (event) => {
       imgButton.addEventListener('click', generateImage);
-      imgButton.innerHTML = 'Generate Image';
+      imgButton.innerHTML = '結果画像を出力';
       event.stopPropagation();
     });
     imgButton.insertAdjacentElement('beforeend', resetButton);
